@@ -6,6 +6,8 @@ export default class GetAQuestion extends Component {
 
 
   alertUser(question) {
+    // console.log(question)
+    // return question
     alert(`Your question is: ${question}`)
   }
 
@@ -14,7 +16,7 @@ export default class GetAQuestion extends Component {
     return (
       <div>
         <button className="question-button" onClick={(e) => this.alertUser(this.props.question)}>Click to get a Question</button>
-
+      <output>Your question is: </output>
       </div>
     );
   }

@@ -5,6 +5,7 @@ import axios from 'axios'
 import GetAQuestion from './Components/Question/GetAQuestion'
 import Answer from './Components/Answer/Answer'
 import Header from './Components/Header/Header'
+// import GetQuestionById from './Components/Question/GetQuestionById'
 
 
 
@@ -43,7 +44,9 @@ class App extends Component {
         <Header />
         <GetAQuestion question={this.state.question} />
         <Answer answer={this.state.answer} />
-      </div>
+
+
+        </div>
     );
   }
 }
