@@ -1,30 +1,22 @@
-// import react from 'react'
-// import axios from 'axios'
+import React, { Component } from 'react'
+import axios from 'axios'
 
 
+export default class GetAQuestion extends Component {
 
 
+  alertUser(question) {
+    alert(`Your question is: ${question}`)
+  }
 
+  render() {
+    console.log(this.props)
+    return (
+      <div>
+        <button className="question-button" onClick={(e) => this.alertUser(this.props.question)}>Click to get a Question</button>
 
-// export default class App extends Component {
-//     constructor(){
-//       super()
-//       this.state = {
-//         question: '',
-//         answer: ''
-//       }
-//     }
-    
-    
-//     componentDidMount(){
-//       axios.get('http://www.jservice.io/api/random')
-//       .then(function (response) {
-//         console.log(response)
-        
-//       })
-//       .catch(function (error) {
-//         console.log(error)
-        
-//       });
-    
-//     }
+      </div>
+    );
+  }
+
+}
