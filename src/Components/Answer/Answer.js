@@ -12,7 +12,7 @@ export default class Answer extends Component {
         return (
             <div>
                 <button className="answer-button" onClick={(e) => this.handleClick(this.props.answer)}>Click for Answer</button>
-
+                <p>{this.state.answer}</p>
             </div>
         );
     }

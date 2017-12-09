@@ -20,22 +20,23 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    var promise = axios.get('http://www.jservice.io/api/random')
-    promise.then((response) => {
-      console.log(response)
-      this.setState({
-        id: response.data.id,
-        question: response.data["0"].question,
-        answer: response.data["0"].answer
-      })
-
-    })
-      .catch(function (error) {
-        console.log(error)
-
-      });
-
+  
   }
+  // componentDidMount() {
+  //   var promise = axios.get('http://www.jservice.io/api/category?id='+id)
+  //   promise.then((response) => {
+  //     console.log(response)
+  //     this.setState({
+  //    id: response.data[id].question
+  //     })
+
+  //   })
+  //     .catch(function (error) {
+  //       console.log(error)
+
+  //     });
+
+  // }
 
 
   render() {
