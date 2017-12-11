@@ -109,28 +109,27 @@ body{
 .ans-dis-off{
     display: none;
 }
-    
-.form-text{
+ /* Not displayed in current build    */
+/* .form-text{
     color: rgb(216, 219, 23);
     font-family: 'Ranchers', cursive;
     font-size: 25px;
     margin-top: 50px;
     position: relative;
     left: 465px;
-}
+} */
 
-.submit-button{
-    
-}
 
-.footer-section{
+
+/* .footer-section{
     height: 100px;   
 }
 .footer-section h4{
+    background: black;
     color: rgb(216, 219, 23);
     font-size: 12px;
     font-family: 'Ranchers', cursive;
     position: relative;
     top: 60px;
     left: 10px;
-}
+} */
