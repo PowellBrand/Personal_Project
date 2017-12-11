@@ -6,6 +6,7 @@ import GetAQuestion from './Components/Question/GetAQuestion'
 // import Answer from './Components/Answer/Answer'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
+import SaveAQuestion from './Components/Question/SaveAQuestion'
 // import GetQuestionById from './Components/Question/GetQuestionById'
 
 
@@ -15,7 +16,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      id: 0,
+      title: '',
       question: '',
       answer: ''
     }
@@ -35,7 +36,7 @@ class App extends Component {
   //       console.log(error)
 
   //     });
-  
+
   // }
   // componentDidMount() {
   //   var promise = axios.get('http://www.jservice.io/api/category?id='+id)
@@ -54,17 +55,17 @@ class App extends Component {
   // }
 
   //move below line into the render for it to function.
-// <Answer answer={this.state.answer} />
-// <GetQuestionById question={this.state.question} answer={this.state.answer}/>
+  // <Answer answer={this.state.answer} />
+  // <GetQuestionById question={this.state.question} answer={this.state.answer}/>
 
   render() {
     return (
       <div>
         <Header />
         <GetAQuestion question={this.state.question} answer={this.state.answer} />
-        
+        <SaveAQuestion />
         <Footer />
-        </div>
+      </div>
     );
   }
 }

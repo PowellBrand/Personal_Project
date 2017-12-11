@@ -9,7 +9,6 @@ export default class GetAQuestion extends Component {
     this.state = {
       question: '',
       answer: '',
-      id: 0,
       title: '',
       showAns: false
     }
@@ -40,7 +39,7 @@ export default class GetAQuestion extends Component {
       this.setState({
         question: response.data["0"].question,
         answer: response.data["0"].answer,
-        id: response.data["0"].id,
+        title: response.data["0"].category.title,
         showAns: false
       }
       )
@@ -74,7 +73,7 @@ export default class GetAQuestion extends Component {
 
         {/* Display id */}
         <div className="id-indicator">
-          <p className="id-p">id: {this.state.id}</p>
+          <p className="id-p">Category: {this.state.title}</p>
         </div>
 
         {/* answer block starts */}

@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: auto;
     width: 100%;
     /* background: rgb(39,39,223); */
     background-image: url("https://ss1-fkj3kofiepc0vlx.netdna-ssl.com/wp-content/uploads/2015/03/jeopardy_slot_bg.jpg");
@@ -58,13 +58,13 @@ body{
     left: 410px;
   }
   .id-indicator{
-    width: 75px;
-    height: 30px;
+    width: 85px;
+    height: 60px;
     /* border: 3px solid black;
     background: rgba(18, 52, 161, 0.514); */
     position: relative;
-    bottom: 175px;
-    left: 412px;
+    bottom: 187px;
+    left: 306px;
   }
   .id-p{
     color: white;
@@ -88,7 +88,7 @@ body{
 }
 
 .answer-button{
-    margin-top: 20px;
+    margin-top: 14px;
 }
 .q-p, .ans-p{
     color: white;
@@ -109,6 +109,17 @@ body{
 .ans-dis-off{
     display: none;
 }
+
+.saveBtn{
+    height: 50px;
+    width: 100px;
+    background: none;
+    border: 3px solid white;
+    font-size: 15px;
+    color: rgb(216, 219, 23);
+    font-family: 'Ranchers', cursive;
+    border-radius: 30px;
+}
  /* Not displayed in current build    */
 /* .form-text{
     color: rgb(216, 219, 23);
@@ -121,8 +132,9 @@ body{
 
 
 
-/* .footer-section{
-    height: 100px;   
+.footer-section{
+    height: 100px; 
+    background: black;  
 }
 .footer-section h4{
     background: black;
@@ -132,4 +144,4 @@ body{
     position: relative;
     top: 60px;
     left: 10px;
-} */
+}
