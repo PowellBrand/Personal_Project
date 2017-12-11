@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import SaveAQuestion from './SaveAQuestion'
+// import QTracker from './QTracker'
 
 
 export default class GetAQuestion extends Component {
@@ -28,6 +30,12 @@ export default class GetAQuestion extends Component {
 
   //     });
 
+  // }
+
+  // btnClick(){
+  //   var count = 0;
+  //   count++; 
+  //   return count;  
   // }
 
   //Working question block
@@ -62,6 +70,13 @@ export default class GetAQuestion extends Component {
   }
   //----------------------------------
   render() {
+    function btnClick(){
+        var count = 0;
+        if(document.getElementById(''))
+        count++; 
+        return count;  
+      }
+
     console.log(this.props)
     return (
       // question block starts
@@ -78,10 +93,12 @@ export default class GetAQuestion extends Component {
 
         {/* answer block starts */}
         <div className="a-div">
-          <button className="answer-button" onClick={(e) => this.handleClick(this.state.answer)}>Click for Answer</button>
+          <button className="answer-button" onClick={(e) => this.handleClick(this.state.answer).btnClick()}>Click for Answer</button>
+          
           <section className="a-section">           
             <p className={this.state.showAns ? "ans-p ans-dis-on": "ans-p ans-dis-off"}>{this.state.answer}</p>
           </section>
+          <SaveAQuestion question={this.state.question} answer={this.state.answer} title ={this.state.title}/>
         </div>
 
 

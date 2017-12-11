@@ -6,7 +6,7 @@ import GetAQuestion from './Components/Question/GetAQuestion'
 // import Answer from './Components/Answer/Answer'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
-import SaveAQuestion from './Components/Question/SaveAQuestion'
+// import SaveAQuestion from './Components/Question/SaveAQuestion'
 // import GetQuestionById from './Components/Question/GetQuestionById'
 
 
@@ -57,13 +57,13 @@ class App extends Component {
   //move below line into the render for it to function.
   // <Answer answer={this.state.answer} />
   // <GetQuestionById question={this.state.question} answer={this.state.answer}/>
-
+// SaveAQuestion is called in the GetAQuestion component.
+  // <SaveAQuestion />
   render() {
     return (
       <div>
         <Header />
         <GetAQuestion question={this.state.question} answer={this.state.answer} />
-        <SaveAQuestion />
         <Footer />
       </div>
     );

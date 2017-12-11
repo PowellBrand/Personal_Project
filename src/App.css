@@ -119,6 +119,9 @@ body{
     color: rgb(216, 219, 23);
     font-family: 'Ranchers', cursive;
     border-radius: 30px;
+    position: relative; 
+    left: 615px;
+    margin-top: 15px;
 }
  /* Not displayed in current build    */
 /* .form-text{
@@ -144,4 +147,18 @@ body{
     position: relative;
     top: 60px;
     left: 10px;
+}
+.saved-q-section{
+   width: 480px;
+   height: auto;
+   background:rgba(18, 52, 161, 0.514);
+   border: 3px solid black;
+   padding: 10px;
+   position: relative;
+   left: 410px;
+   margin-top: 15px;
+}
+.saved-questions{
+    color: white;
+    font-size: 16px;
 }
