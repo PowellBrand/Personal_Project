@@ -4,40 +4,46 @@ import axios from 'axios'
 
 export default class GetAQuestion extends Component {
 
-constructor(){
-  super()
-  this.state = {
-    question: '',
-    answer:''
+  constructor() {
+    super()
+    this.state = {
+      question: '',
+      answer: '',
+      id: 0,
+      title: '',
+      showAns: false
+    }
   }
-}
-componentDidMount() {
-  var promise = axios.get('http://www.jservice.io/api/random')
-  promise.then((response) => {
-    console.log(response)
-    this.setState({
-   question: response.data['0'].question,
-  //  answer: response.data['0'].answer
-    })
+  // componentDidMount() {
+  //   var promise = axios.get('http://www.jservice.io/api/random')
+  //   promise.then((response) => {
+  //     console.log(response)
+  //     this.setState({
+  //       question: response.data['0'].question,
+  //       //  answer: response.data['0'].answer
+  //     })
 
-  })
-    .catch(function (error) {
-      console.log(error)
+  //   })
+  //     .catch(function (error) {
+  //       console.log(error)
 
-    });
+  //     });
 
-}
-  alertUser() {
-    // console.log(question)
-    // return question
+  // }
+
+  //Working question block
+  alertUser(question) {
+    this.state.question;
     var promise = axios.get('http://www.jservice.io/api/random')
     promise.then((response) => {
       console.log(response)
       this.setState({
         question: response.data["0"].question,
-        answer: response.data["0"].answer
+        answer: response.data["0"].answer,
+        id: response.data["0"].id,
+        showAns: false
       }
-    )
+      )
 
     })
       .catch(function (error) {
@@ -46,14 +52,42 @@ componentDidMount() {
       });
 
   }
+  //--------------------------------
 
+  //Semi-working answer 
+  handleClick(answer) {
+    this.state.answer;
+    this.setState({
+      showAns: true
+    })
+  }
+  //----------------------------------
   render() {
     console.log(this.props)
     return (
-      <div>
+      // question block starts
+      <div className="q-div">
         <button className="question-button" onClick={(e) => this.alertUser()}>Click to get a Question</button>
-      <p>{this.state.question}</p>
+        <section className="q-section">
+          <p className="q-p">{this.state.question}</p>
+        </section>
+
+        {/* Display id */}
+        <div className="id-indicator">
+          <p className="id-p">id: {this.state.id}</p>
+        </div>
+
+        {/* answer block starts */}
+        <div className="a-div">
+          <button className="answer-button" onClick={(e) => this.handleClick(this.state.answer)}>Click for Answer</button>
+          <section className="a-section">           
+            <p className={this.state.showAns ? "ans-p ans-dis-on": "ans-p ans-dis-off"}>{this.state.answer}</p>
+          </section>
+        </div>
+
+
       </div>
+
     );
   }
 
